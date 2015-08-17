@@ -69,7 +69,7 @@
 			<artifactId>spring-boot-starter-jetty</artifactId>
 		</dependency>
 
-		<!-- Hystrix (come with rxJava) -->
+		<!-- Hystrix -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-hystrix</artifactId>
@@ -77,6 +77,12 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+		</dependency>
+		
+		<!-- RxJava -->
+		<dependency>
+			<groupId>io.reactivex</groupId>
+			<artifactId>rxjava</artifactId>
 		</dependency>
 
 		<!-- Jersey -->

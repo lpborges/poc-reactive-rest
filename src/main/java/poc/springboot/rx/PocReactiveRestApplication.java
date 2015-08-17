@@ -5,6 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
+/**
+* @author <a href="mailto:leandropg@ciandt.com">Leandro de Paula Borges</a>
+*/
 @SpringBootApplication
 @EnableCircuitBreaker
 @EnableHystrixDashboard
