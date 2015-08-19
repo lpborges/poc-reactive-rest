@@ -12,6 +12,8 @@ import javax.ws.rs.container.Suspended;
 import javax.ws.rs.core.MediaType;
 
 import org.glassfish.jersey.server.ManagedAsync;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import io.swagger.annotations.Api;
@@ -31,6 +33,8 @@ import poc.springboot.rx.domain.Product;
 @Api(value = "feign")
 @Produces(MediaType.APPLICATION_JSON)
 public class FeignApi {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(FeignApi.class);
 
     @Autowired
     private ProductClient productClient;
@@ -58,7 +62,7 @@ public class FeignApi {
             asyncResponse.resume(product);
         }
         catch(final Exception e){
-            System.out.println(e);
+            LOGGER.error("Error on request product", e);
             asyncResponse.resume(e);
         }
     }

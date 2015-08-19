@@ -14,7 +14,7 @@ import poc.springboot.rx.domain.Product;
 * @author <a href="mailto:leandropg@ciandt.com">Leandro de Paula Borges</a>
 */
 
-@FeignClient(value="api")
+@FeignClient(url="localhost:8080/api")
 public interface ProductClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/products/{idProduct}", consumes = "application/json")
